@@ -1,0 +1,34 @@
+@import "nio";
+
+.nio-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $dist-huge;
+  padding-top: $dist-huge;
+
+  $color-header: $color-yellow;
+
+  background-color: $color-header;
+  border-bottom: darken($color-header, 15%) $dist-hair solid;
+  color: darken($color-header, 45%);
+
+  &__logo {
+    width: auto;
+    height: $font-size-huge;
+    margin-right: 1ch;
+  }
+
+  &__title {
+
+  }
+}
+
+.nio-article {
+ width: 75vw;
+ max-width: 80ch;
+ min-width: 55ch;
+ margin-left: auto;
+ margin-right: auto;
+}

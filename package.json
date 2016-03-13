@@ -1,0 +1,42 @@
+{
+  "name": "nio-style-guide",
+  "description": "A Brunch.io skeleton for prototyping/bootstrapping a nio frontend.",
+  "author": "J. Holmes",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nioinnovation/brunchy"
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production",
+    "lint": "eslint app/",
+    "test": "mocha",
+    "verify": "eslint app/ && mocha",
+    "clean": "rm -rf public/"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.0.0",
+    "autoprefixer": "^6.3.3",
+    "brunch-static": "^1.1.1",
+    "chai": "^1.9.2",
+    "clean-css-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "eslint-brunch": "^3.3.0",
+    "html-brunch-static": "^1.2.1",
+    "javascript-brunch": "^2.0.0",
+    "jsenv-brunch": "^1.4.2",
+    "marked-brunch-static": "^1.1.0",
+    "mocha": "^2.0.1",
+    "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
+    "postcss-brunch": "^0.5.0",
+    "sass-brunch": "git+ssh://git@github.com:brunch/sass-brunch.git#d3cee9524ed785a8a8bee1d74dcedc34ac52ddef",
+    "uglify-js-brunch": "^2.0.0"
+  },
+  "dependencies": {
+    "cellx": "^1.5.11",
+    "d3": "^3.5.16",
+    "lodash": "^4.6.1",
+    "niojs": "^1.1.5"
+  }
+}
