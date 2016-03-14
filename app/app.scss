@@ -1,10 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:500);
+
 @import "nio";
 
-.nio-header {
+body {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.centered-content-area {
+  width: 75vw;
+  max-width: 80ch;
+  min-width: 55ch;
+  margin-left: auto; margin-right: auto;
+}
+
+.nio-header {
+  flex-shrink: 0;
   padding-bottom: $dist-huge;
   padding-top: $dist-huge;
 
@@ -12,7 +24,16 @@
 
   background-color: $color-header;
   border-bottom: darken($color-header, 15%) $dist-hair solid;
-  color: darken($color-header, 45%);
+  color: darken($color-header, 55%);
+  margin-bottom: 1.5rem;
+
+  &__content {
+    @extend .centered-content-area;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
   &__logo {
     width: auto;
@@ -21,14 +42,159 @@
   }
 
   &__title {
-
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .nio-article {
- width: 75vw;
- max-width: 80ch;
- min-width: 55ch;
- margin-left: auto;
- margin-right: auto;
+  @extend .centered-content-area;
+ flex-grow: 1;
+}
+
+.nio-footer {
+  text-align: center;
+  background-color: #eee;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: $font-size-small;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+
+p, pre, ol, ul, table {
+  margin-top: $dist-margin;
+  margin-bottom: $dist-margin;
+}
+
+code {
+  font-size: $font-size-small;
+  font-family: 'Source Code Pro', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: 500;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: $dist-thin;
+  padding: $dist-small 0;
+  &::before, &::after {
+    font: $font-base;
+    content: "\A0";
+  }
+}
+
+[href='#wrapper']:link {
+  font-size: $font-size-small;
+}
+
+pre > code {
+  padding: 0; margin: 0;
+  white-space: pre;
+  margin-top: 0;
+  background-color: transparent;
+  &::before, &::after { content: none; }
+}
+
+pre {
+  @extend .nio-boxed, .nio-boxed--bordered, .nio-boxed--shaded;
+  line-height: $font-line-height-loose;
+  overflow: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+figure {
+  position: relative;
+  margin-top: 1rem * $font-line-height;
+  margin-bottom: 2rem * $font-line-height;
+
+  & > figcaption {
+    font-size: $font-size-small;
+    position: absolute;
+    top: 100%; right: 0;
+    padding-top: $dist-small;
+    padding-right: $dist-small;
+    color: $color-mid;
+  }
+}
+
+.examples {
+  @extend .nio-boxed, .nio-boxed--bordered;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--dark {
+    background-color: #333;
+  }
+}
+
+blockquote {
+  @extend .nio-boxed, .nio-boxed--shaded;
+
+  padding: $dist-large $dist-huge;
+  margin-bottom: 1rem * $font-line-height;
+  position: relative;
+  &::before {
+    content: '\f10d';
+    font-family: fontawesome;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-faint;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    @extend .nio-bordered;
+  }
+
+  margin-top: 2rem * $font-line-height;
+  padding-top: 2rem;
+}
+
+ol, ul { padding-left: 4ch; }
+ol { list-style-type: decimal; }
+ul { list-style-type: disc; }
+
+dl {
+  margin-left: -2ch;
+  text-indent: 2ch;
+  &>dd,&>dt { display: inline; }
+  &>dt {
+    font-weight: 600;
+    letter-spacing: -0.04rem;
+    &::after { content: "\a0\00B7"; }
+  }
+}
+
+// subscripts / superscripts
+sup, sub { font-size: 58.3%; }
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+.nio-link-list {
+  display: flex;
+  justify-content: flex-end;
+
+  &__link {
+    margin-left: 0.5ch;
+    margin-right: 0.5ch;
+    &::before { content: '['; }
+    &::after { content: ']'; }
+  }
+}
+
+.links {
+  @extend .nio-link-list;
+  > a { @extend .nio-link-list__link; }
+}
+
+acronym, abbr {
+  cursor: help;
+  text-decoration: underline;
+  // Firefox
+  text-decoration-color: $color-red;
+  text-decoration-style: dotted;
 }
