@@ -17,7 +17,7 @@ Use the `.nio-form__button` class to style a button. You can group multiple item
   <figcaption>Grouping form elements into a row</figcaption>
   <div class="nio-form__row">
     <input type="text" placeholder="email" class="nio-form__text-field" />
-    <button class="nio-form__button" type="button">subscribe</button>
+    <button class="nio-form__button nio-button--danger" type="button">subscribe</button>
   </div>
 </figure>
 
@@ -33,7 +33,7 @@ It is preferred to the HTML `placeholder` attribute to give inputs labels, howev
   <figcaption>A login form</figcaption>
   <input type="text" id="username" placeholder="username" class="nio-form__text-field" />
   <input type="text" id="password" placeholder="password" class="nio-form__text-field" />
-  <button type="button" id="text_field" class="nio-form__button">Login</button>
+  <button type="button" id="text_field" class="nio-form__button nio-button--primary">login</button>
 </figure>
 
 <figure class="examples">

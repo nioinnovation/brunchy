@@ -14,6 +14,7 @@ There are no stable interfaces yet&hellip;
 * [Tables](tables.html) &ndash; Classes and mixins for tabular data.
 * [Forms](forms.html) &ndash; Classes and mixins for forms and inputs.
 * [Lists](lists.html) &ndash; Classes and mixins for listings and groups.
+* [Buttons](buttons.html) &ndash; Classes and mixins for buttons.
 
 ## Prototypes
 
