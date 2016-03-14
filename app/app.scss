@@ -20,12 +20,11 @@ body {
   padding-bottom: $dist-huge;
   padding-top: $dist-huge;
 
-  $color-header: $color-yellow;
+  $color-header: white;
 
   background-color: $color-header;
   border-bottom: darken($color-header, 15%) $dist-hair solid;
-  color: darken($color-header, 55%);
-  margin-bottom: 1.5rem;
+  color: mix(black, $color-header, 80);
 
   &__content {
     @extend .centered-content-area;
@@ -48,8 +47,33 @@ body {
 }
 
 .nio-article {
-  @extend .centered-content-area;
- flex-grow: 1;
+  flex-grow: 1;
+
+  &__byline {
+    color: $color-light;
+    text-align: right;
+    @extend .centered-content-area;
+    &-author, &-posted { display: inline; }
+    > ::after { content: "\A|"; }
+    > :last-child::after { content: none; }
+  }
+
+  &__content { @extend .centered-content-area; }
+
+  > h1:first-child {
+    margin-top: 0;
+    margin-bottom: 2rem * $font-line-height;
+    padding-top: 6rem * $font-line-height;
+    padding-bottom: 2rem * $font-line-height;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-image: linear-gradient(180deg, rgba(black, 0.80), rgba(black, 0.25)), url('images/home.png');
+    background-attachment: scroll, fixed;
+    background-size: cover;
+    background-position: center center;
+    @extend .nio-heading--inverted;
+  }
+
 }
 
 .nio-footer {
@@ -61,6 +85,12 @@ body {
   flex-shrink: 0;
   margin-top: 1rem;
 }
+
+.blog-list {
+  li { text-transform: capitalize; }
+}
+
+//*********************
 
 p, pre, ol, ul, table {
   margin-top: $dist-margin;

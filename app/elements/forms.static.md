@@ -32,7 +32,6 @@ It is preferred to the HTML `placeholder` attribute to give inputs labels, howev
 <figure class="examples">
   <figcaption>A login form</figcaption>
   <input type="text" id="username" placeholder="username" class="nio-form__text-field" />
-  </div>
   <input type="text" id="password" placeholder="password" class="nio-form__text-field" />
   <button type="button" id="text_field" class="nio-form__button">Login</button>
 </figure>

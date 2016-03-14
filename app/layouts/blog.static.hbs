@@ -1,0 +1,14 @@
+---
+_options:
+  layout: app/layouts/min.static.hbs
+---
+<article class="nio-article">
+  {{#if title }}<h1>{{title}}</h1>{{/if}}
+  <div class="nio-article__byline">
+    {{#if author}}<div class="nio-article__byline-author">by {{author}}</div>{{/if}}
+    {{#if posted}}<div class="nio-article__byline-posted">{{moment posted}}</div>{{/if}}
+  </div>
+  <div class="nio-article__content">
+  {{content}}
+  </div>
+</article>

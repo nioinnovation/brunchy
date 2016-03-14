@@ -3,6 +3,8 @@ _options:
   layout: app/layouts/min.static.hbs
 ---
 <article class="nio-article">
-  <h1>{{title}}</h1>
+  {{#if title }}<h1>{{title}}</h1>{{/if}}
+  <div class="nio-article__content">
   {{content}}
+  </div>
 </article>

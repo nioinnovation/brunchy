@@ -1,5 +1,5 @@
 ---
-title: n.io Headings
+title: n.io Headings and Titles
 _options:
   layout: app/layouts/article.static.hbs
 ---
