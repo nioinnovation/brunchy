@@ -1,7 +1,7 @@
 ---
 title: n.io Tables
 _options:
-  layout: app/layouts/article.static.hbs
+  layout: app/layouts/guide.static.hbs
 ---
 
 For basic styling add or mixin the base class `.nio-table`.
@@ -10,9 +10,7 @@ For basic styling add or mixin the base class `.nio-table`.
   <figcaption>Example table</figcaption>
   <table>
     <thead>
-      <tr>
-        <th>First Name</th><th>Last Name</th><th>Username</th>
-      </tr>
+      <tr><th>First Name</th><th>Last Name</th><th>Username</th></tr>
     </thead>
     <tbody>
       <tr><td>Renita</td><td>Wilkinson</td><td>@rwilkinson</td></tr>
@@ -33,9 +31,7 @@ Use `.nio-table--striped` to add zebra-striping to any row within `<tbody>`
   <figcaption>Striped table</figcaption>
   <table class="nio-table--striped">
     <thead>
-      <tr>
-        <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-      </tr>
+      <tr><th>First Name</th><th>Last Name</th><th>Username</th></tr>
     </thead>
     <tbody>
       <tr><td>Cherry</td><td>Parkey</td><td>@cparkey</td></tr>

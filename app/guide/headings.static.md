@@ -1,7 +1,7 @@
 ---
-title: n.io Headings and Titles
+title: n.io headings
 _options:
-  layout: app/layouts/article.static.hbs
+  layout: app/layouts/guide.static.hbs
 ---
 
 You can create a primary heading using the `.nio-heading` class; this base header has a font size of `$text-size-normal`.

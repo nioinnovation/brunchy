@@ -21,7 +21,5 @@ module.exports = function() {
     return `<li><a href='/blog/${renderedFn}'>${shortname}</a></li>`;
   }).join('');
 
-  console.log(result);
-
   return new hbs.SafeString(result);
 }

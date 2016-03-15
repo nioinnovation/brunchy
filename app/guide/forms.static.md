@@ -1,7 +1,7 @@
 ---
 title: n.io Forms
 _options:
-  layout: app/layouts/article.static.hbs
+  layout: app/layouts/guide.static.hbs
 ---
 
 Use the `.nio-form__text-field` class to style a text field.
@@ -33,7 +33,9 @@ It is preferred to the HTML `placeholder` attribute to give inputs labels, howev
   <figcaption>A login form</figcaption>
   <input type="text" id="username" placeholder="username" class="nio-form__text-field" />
   <input type="text" id="password" placeholder="password" class="nio-form__text-field" />
-  <button type="button" id="text_field" class="nio-form__button nio-button--primary">login</button>
+  <div class="nio-button-bar">
+    <button type="button" id="text_field" class="nio-form__button nio-button--primary">login</button>
+  </div>
 </figure>
 
 <figure class="examples">

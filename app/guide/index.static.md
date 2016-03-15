@@ -1,7 +1,7 @@
 ---
-title: n.io element design guide
+title: n.io design system
 _options:
-  layout: app/layouts/article.static.hbs
+  layout: app/layouts/guide.static.hbs
 ---
 
 ## Stable
