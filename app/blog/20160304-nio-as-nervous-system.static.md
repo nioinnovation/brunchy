@@ -10,7 +10,7 @@ Nio as the nervous system of the connected world.
 
 Here is a nice illustration of the senses (using icons) that talks about how our bodies process incoming information.
 
-![](../assets/images/senses graphic.png)
+![](/images/senses graphic.png)
 
 There are tons of signals, but only a small fraction are consciously processed. Evolution has taught our bodies what is relevant and what can be ignored.
 
