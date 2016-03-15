@@ -1,7 +1,7 @@
 ---
-title: n.io element design guide
+title: n.io buttons
 _options:
-  layout: app/layouts/article.static.hbs
+  layout: app/layouts/guide.static.hbs
 ---
 
 The default button class can be applied by using the `.nio-button` class, which will be a netural

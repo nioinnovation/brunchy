@@ -1,0 +1,93 @@
+
+$sidebar-width: 25ch;
+$logo-height: 10ch;
+
+.guide-header {
+  position: absolute;
+  top: 0; left: 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $logo-height;
+    width: $sidebar-width;
+  }
+  &__logo { width: 25%; }
+  &__title { color: black; font-size: $font-size-large; line-height: 1; margin: 0; margin-left: 0.25ch; }
+}
+
+.guide-sidebar {
+  position: absolute;
+  top: $logo-height;
+  left: 0; width: $sidebar-width;
+  box-sizing: border-box;
+  bottom: 0;
+  overflow: auto;
+}
+
+.list-item {
+  display: block;
+  padding-top: $dist-medium;
+  padding-bottom: $dist-medium;
+  border-top: 1px solid $color-faint;
+  border-bottom: 1px solid $color-faint;
+  margin-bottom: -1px;
+
+  padding-left: $dist-large;
+
+  &--child {
+    &::before { content: "\2022\a"; }
+    padding-left: $dist-large * 2;
+  }
+}
+
+.guide-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: calc(100vw - #{$sidebar-width});
+  left: $sidebar-width;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  border-left: $dist-hair solid $color-mid;
+
+  &__title {
+    @extend .nio-heading--inverted;
+    background-color: $color-red;
+    background-attachment: fixed;
+    background-image: linear-gradient(10deg, rgba(darken($color-info, 20%),0.3) 70%, transparent, rgba(0,0,0,0.5));
+    border-bottom: $dist-normal solid mix($color-red, black, 25);
+    text-align: left;
+    > h1 {
+      text-align: left; margin: 3rem 0 3rem 4rem;
+    }
+    margin-bottom: 1rem * $font-line-height;
+  }
+
+  &__content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    min-width: 40rem;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    text-align: center;
+    background-color: #eee;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: $font-size-small;
+    margin-top: 1rem;
+    &__content {
+      @extend .centered-content-area;
+    }
+  }
+}
+
+
+@media screen and (max-width: $size-mobile) {
+  .guide-header { position: static; }
+  .guide-panel { position: static; }
+  .guide-sidebar { position: static; width: auto; border-bottom: $dist-hair solid black; }
+}

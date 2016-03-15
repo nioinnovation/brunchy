@@ -1,0 +1,47 @@
+---
+_options:
+  layout: app/layouts/root.static.hbs
+---
+<header class="guide-header">
+  <a class="guide-header__container" href="/guide/">
+  <svg class="guide-header__logo"><use xlink:href="#nio-logo--small" /></svg>
+  <h1 class="guide-header__title">Design System</h1>
+  </a>
+</header>
+
+
+<nav class="guide-sidebar">
+<ol>
+  <li>
+    <div class="list-item">Design</div>
+    <ol>
+      <li class="list-item list-item--child">Overview</li>
+    </ol>
+  </li>
+  <li>
+    <div class="list-item">Components</div>
+    <ol>
+      <li><a class="list-item list-item--child" href="buttons.html#main">Buttons</a></li>
+      <li><a class="list-item list-item--child" href="forms.html#main">Forms</a></li>
+      <li><a class="list-item list-item--child" href="headings.html#main">Headings</a></li>
+      <li><a class="list-item list-item--child" href="lists.html#main">Lists</a></li>
+      <li><a class="list-item list-item--child" href="tables.html#main">Tables</a></li>
+    </ol>
+  </li>
+</ol>
+</nav>
+
+
+<main class="guide-panel" id="main">
+  {{#if title}}
+  <div class="guide-panel__title">
+    <h1>{{title}}</h1>
+  </div>
+  {{/if}}
+  <article class="guide-panel__content">
+  {{content}}
+  </article>
+  <footer class="guide-panel__footer">
+    Powered by n.io
+  </footer>
+</main>

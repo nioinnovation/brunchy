@@ -1,14 +1,24 @@
 ---
 _options:
-  layout: app/layouts/min.static.hbs
+  layout: app/layouts/root.static.hbs
 ---
-<article class="nio-article">
-  {{#if title }}<h1>{{title}}</h1>{{/if}}
-  <div class="nio-article__byline">
-    {{#if author}}<div class="nio-article__byline-author">by {{author}}</div>{{/if}}
-    {{#if posted}}<div class="nio-article__byline-posted">{{moment posted}}</div>{{/if}}
+<main class="blog-entry">
+<header class="blog-entry__fit blog-header">
+  <div class="blog-header__content">
+  <svg class="blog-header__logo" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#nio-logo--wide" /></svg>
+  <h1 class="blog-header__title">Design Blog</h1>
   </div>
+</header>
+<article class="blog-entry__fill nio-article">
+  {{#if title }}<h1>{{title}}</h1>{{/if}}
+  <div class="nio-article__byline">{{#if author}}<div class="nio-article__byline-author">by {{author}}</div>{{/if}}{{#if posted}}<div class="nio-article__byline-posted">{{moment posted}}</div>{{/if}}</div>
   <div class="nio-article__content">
   {{content}}
   </div>
 </article>
+<footer class="blog-entry__fit blog-footer">
+  <div class="blog-footer__content">
+    Powered by n.io
+  </div>
+</footer>
+</main>
