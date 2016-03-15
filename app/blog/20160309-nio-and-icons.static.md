@@ -9,7 +9,7 @@ _options:
 Icons are a strong theme on all nio websites, pitch decks, and videos.
 
 
-![](../assets/images/niolabs_icons.png)
+![](/images/niolabs_icons.png)
 
 
 Icons are simple graphics that represent an idea or concept, independent of any particular language, specific words, or phrases
