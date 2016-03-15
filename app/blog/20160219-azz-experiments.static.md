@@ -1,7 +1,7 @@
 ---
 title: Experiments with Improving the Usability of the AZZ Entry UI.
 author:  James Holmes
-posted: 20150314
+posted: 20160314
 _options:
   layout: app/layouts/blog.static.hbs
 ---
