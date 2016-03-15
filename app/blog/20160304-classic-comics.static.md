@@ -8,7 +8,7 @@ _options:
 
 ![](/images/classic-comics/nio-295.JPG)
 
-The red, the yellow, the blue, the black outline. Reminds me of classic cartoons and superheros—Dick Tracy's clear colors and futuristic technologies.
+The red, the yellow and blue walls, the black outline. Reminds me of classic cartoons and superheros—Dick Tracy's clear colors and futuristic technologies.
 
 ![](/images/classic-comics/DTcircle.jpg)
 

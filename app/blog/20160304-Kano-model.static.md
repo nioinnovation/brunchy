@@ -15,9 +15,10 @@ Features are divided into three categories:
  - features that reliably improve performance
  - features that add extra, unexpected value
 
+
  ![](/images/Kano-model.png)
 
-With basic, must have features, you can only lose. You must have these features and they must be fully functional. You don’t gain much in satisfaction, but you don’t lose either. Without these features, you will lose satisfaction.
+With basic, must-have features, you can only lose. You must have these features and they must be fully functional. You don’t gain much in satisfaction, but you don’t lose either. Without these features, you will lose satisfaction.
 
 For features that reliably improve performance, the time you put in is roughly equivalent to the amount of satisfaction a customer gets out.
 
