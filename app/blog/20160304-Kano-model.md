@@ -15,7 +15,7 @@ Features are divided into three categories:
  - features that reliably improve performance
  - features that add extra, unexpected value
 
- ![](.../assets/images/Kano-model.png)
+ ![](../assets/images/Kano-model.png)
 
 With basic, must have features, you can only lose. You must have these features and they must be fully functional. You don’t gain much in satisfaction, but you don’t lose either. Without these features, you will lose satisfaction.
 

@@ -50,7 +50,7 @@ https://color.adobe.com/library/02009a27-0577-4cc1-a71b-bb08e43d764a/theme/786f2
 
 Colors from a photo of a city at night:
 
-![](../assets/images/highway_city.jpg)
+![](../assets/images/cities/highway_city.jpg)
 
 ![](../assets/images/colors/cityAtNight.png)
 https://color.adobe.com/library/02009a27-0577-4cc1-a71b-bb08e43d764a/theme/8001386a-d85e-4b4b-a58b-19511302ebe1/

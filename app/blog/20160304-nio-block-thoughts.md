@@ -10,33 +10,33 @@ _options:
 
 Here is a block illustration that could apply to nio if it had names of nio blocks instead of designer's tools:
 
-![](../assets/images/blocks.PNG)
+![](../assets/images/blocks/blocks.PNG)
 
 And when researching various static site generators I saw that many of them used a hexagon for their logo. Hexagons are not only the natural building blocks of bees, but also the outline of a cube in perspective, like this:
 
-![](../assets/images/hex_cube.gif)
+![](../assets/images/blocks/hex_cube.gif)
 
 Patrick has this block illustration on his laptop:
 
-![](../assets/images/PLlaptop.JPG)
+![](../assets/images/blocks/PLlaptop.JPG)
 
-![](../assets/images/surprise_face.jpeg) What blocks strike your fancy? What might a nio block look like?
+![](../assets/images/blocks/surprise_face.jpeg) What blocks strike your fancy? What might a nio block look like?
 
 
-![](../assets/images/lego_blocks.jpeg)
+![](../assets/images/blocks/lego_blocks.jpeg)
 
-![](../assets/images/art_blocks.jpeg)
+![](../assets/images/blocks/art_blocks.jpeg)
 
-![](../assets/images/block_head.jpg)
+![](../assets/images/blocks/block_head.jpg)
 
-![](../assets/images/dog_block.jpeg)
+![](../assets/images/blocks/dog_block.jpeg)
 
-![](../assets/images/minecraft_blocks.jpeg)
+![](../assets/images/blocks/minecraft_blocks.jpeg)
 
-![](../assets/images/color_blocks.jpeg)
+![](../assets/images/blocks/color_blocks.jpeg)
 
-![](../assets/images/city_blocks.jpeg)
+![](../assets/images/blocks/city_blocks.jpeg)
 
-![](../assets/images/tree_blocks.jpeg)
+![](../assets/images/blocks/tree_blocks.jpeg)
 
-![](../assets/images/wire_blocks.jpg)
+![](../assets/images/blocks/wire_blocks.jpg)
