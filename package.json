@@ -32,7 +32,8 @@
     "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
     "postcss-brunch": "^0.5.0",
     "sass-brunch": "git+ssh://git@github.com:brunch/sass-brunch.git#d3cee9524ed785a8a8bee1d74dcedc34ac52ddef",
-    "uglify-js-brunch": "^2.0.0"
+    "uglify-js-brunch": "^2.0.0",
+    "yaml-front-matter": "^3.4.0"
   },
   "dependencies": {
     "cellx": "^1.5.11",
