@@ -2,6 +2,9 @@
 title: Introduction to BEM
 author:  James Holmes
 posted: 20160315
+summary:
+  A quick overview of BEM, a CSS methodology that is used in the front-end for framework layers
+  that helps provide structure, organization, and composability.
 _options:
   layout: app/layouts/blog.static.hbs
 ---
@@ -12,11 +15,9 @@ _options:
 
 BEM is ultimately a CSS naming convention that follows the following basic elements: `block__element--modifier`
 
-A `block` is a standalone entity that is meaningful on its own.
-
-An `element` parts of a block and have no standalone meaning, they are semantically tied to its block.
-
-A `modifier` is a flags on blocks or elements, they are used to change appearance or behavior.
+* A `block` is a standalone entity that is meaningful on its own.
+* An `element` parts of a block and have no standalone meaning, they are semantically tied to its block.
+* A `modifier` is a flags on blocks or elements, they are used to change appearance or behavior.
 
 ## why is this a good idea?
 

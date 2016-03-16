@@ -6,6 +6,12 @@ _options:
 
 You can create a primary heading using the `.nio-heading` class; this base header has a font size of `$text-size-normal`.
 
+Example Usage:
+
+```
+<div class="nio-heading">Standard Heading</div>
+```
+
 <figure class="examples">
   <figcaption>The Standard Header</figcaption>
   <div class="nio-heading">Standard Heading</div>
@@ -22,49 +28,54 @@ There are also *six* size variants, ranging from `$text-size-huge` to `$text-siz
 * `--quinary`
 * `--senary`
 
+Example Usage:
+
+```html
+<div class="nio-heading nio-heading--primary">primary heading</div>
+<div class="nio-heading nio-heading--tertiary">tertiary heading</div>
+```
+
 <figure class="examples">
   <figcaption>Size Variants</figcaption>
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
+  <div class="nio-heading nio-heading--primary">primary heading</div>
+  <div class="nio-heading nio-heading--secondary">secondary heading</div>
+  <div class="nio-heading nio-heading--tertiary">tertiary heading</div>
+  <div class="nio-heading nio-heading--quaternary">quaternary heading</div>
+  <div class="nio-heading nio-heading--quinary">quinary heading</div>
+  <div class="nio-heading nio-heading--senary">senary heading</div>
 </figure>
-
-
-You can use it directly on an HTML element as the following:
-
-```
-<div class="nio-heading nio-heading--primary">
-  Primary Heading
-</div>
-```
 
 However, it is preferred to mix this helper into a specific selector with SCSS.
 ```
-[selector] {
-  @extend .nio-heading, .nio-heading--primary;
-}
+[selector] { @extend .nio-heading, .nio-heading--primary; }
 ```
+
+## centered headings
+
+Headings can be centered using the `.nio-heading--centered`.
+
+```html
+<div class="nio-heading nio-heading--secondary nio-heading--centered">the digital genie is out of the bottle</div>
+```
+
+<figure class="examples">
+  <figcaption>Size Variants</figcaption>
+  <div class="nio-heading nio-heading--secondary nio-heading--centered">the digital genie is out of the bottle</div>
+</figure>
 
 ## inverted headings
 
 For dark backgrounds, you can add the `.nio-heading--inverted` class to increase readability against dark backgrounds. Again, mixins are preferred over HTML classes.
 
-<figure class="examples examples--dark">
-  <figcaption>Dark Background Headers</figcaption>
-  <h1 class='nio-heading--inverted'>Heading 1</h1>
-  <h2 class='nio-heading--inverted'>Heading 2</h2>
-  <h3 class='nio-heading--inverted'>Heading 3</h3>
-  <h4 class='nio-heading--inverted'>Heading 4</h4>
-  <h5 class='nio-heading--inverted'>Heading 5</h5>
-  <h6 class='nio-heading--inverted'>Heading 6</h6>
-</figure>
 
 ```
 [selector] {
-  @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted;
+  @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted, .nio-heading--centered;
 }
 ```
+
+<figure class="examples examples--dark">
+  <figcaption>Dark Background Headers</figcaption>
+  <div class='nio-heading nio-heading--primary nio-heading--inverted nio-heading--centered'>Heading 1</div>
+</figure>
 
