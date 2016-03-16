@@ -11,9 +11,16 @@ $logo-height: 10ch;
     justify-content: center;
     height: $logo-height;
     width: $sidebar-width;
+    text-decoration: none;
   }
   &__logo { width: 25%; }
-  &__title { color: black; font-size: $font-size-large; line-height: 1; margin: 0; margin-left: 0.25ch; }
+  &__title {
+    color: black;
+    font-size: $font-size-large;
+    line-height: 1;
+    margin: 0;
+    margin-left: 0.25ch;
+   }
 }
 
 .guide-sidebar {
@@ -27,16 +34,14 @@ $logo-height: 10ch;
 
 .list-item {
   display: block;
-  padding-top: $dist-medium;
-  padding-bottom: $dist-medium;
-  border-top: 1px solid $color-faint;
-  border-bottom: 1px solid $color-faint;
-  margin-bottom: -1px;
+  padding-top: $dist-normal;
+  padding-bottom: $dist-normal;
 
   padding-left: $dist-large;
 
   &--child {
-    &::before { content: "\2022\a"; }
+    &:link, &:visited { @extend .nio-link; }
+    &::before { content: "\f054\a"; font-family: fontawesome; font-size: $font-size-small; vertical-align: middle; }
     padding-left: $dist-large * 2;
   }
 }
@@ -53,19 +58,20 @@ $logo-height: 10ch;
   border-left: $dist-hair solid $color-mid;
 
   &__title {
-    @extend .nio-heading--inverted;
     background-color: $color-red;
     background-attachment: fixed;
-    background-image: linear-gradient(10deg, rgba(darken($color-info, 20%),0.3) 70%, transparent, rgba(0,0,0,0.5));
+    background-image: linear-gradient(4.2deg, rgba(darken($color-info, 20%),0.3) 70%, transparent, rgba(0,0,0,0.5));
     border-bottom: $dist-normal solid mix($color-red, black, 25);
     text-align: left;
     > h1 {
+      @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted;
       text-align: left; margin: 3rem 0 3rem 4rem;
     }
     margin-bottom: 1rem * $font-line-height;
   }
 
   &__content {
+    @extend .nio-html;
     padding-left: 4rem;
     padding-right: 4rem;
     min-width: 40rem;
@@ -89,5 +95,5 @@ $logo-height: 10ch;
 @media screen and (max-width: $size-mobile) {
   .guide-header { position: static; }
   .guide-panel { position: static; }
-  .guide-sidebar { position: static; width: auto; border-bottom: $dist-hair solid black; }
+  .guide-sidebar { position: static; width: auto; border-bottom: $dist-hair solid black; padding-bottom: $font-line-height * 1rem; }
 }

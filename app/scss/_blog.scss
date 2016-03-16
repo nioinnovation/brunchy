@@ -1,14 +1,29 @@
 .centered-content-area {
   width: 75vw;
-  max-width: 80ch;
-  min-width: 55ch;
+  max-width: 50rem;
+  min-width: 25rem;
   margin-left: auto; margin-right: auto;
 }
 
+// archive
 .blog-list {
-  @extend .nio-list, .nio-list--bulleted;
-  li { text-transform: capitalize; }
+  @extend .nio-list, .nio-html, .centered-content-area;
+
+  .blog-summary {
+    &__title {
+      @extend .nio-heading, .nio-heading--secondary;
+      margin-bottom: 0;
+    }
+    &__byline { @extend .byline-common; }
+    &__read-more {
+      display: block;
+      margin-top: 1rem * $font-line-height;
+      font-size: $font-size-small;
+    }
+  }
 }
+
+.confused { @extend .nio-html, .centered-content-area; }
 
 .blog-entry {
   display: flex;
@@ -17,6 +32,16 @@
 
   &__fit { flex-shrink: 0; }
   &__fill { flex-grow: 1; }
+}
+
+.byline-common {
+  padding-left: 1ch;
+  color: $color-mid;
+  font-size: $font-size-small;
+  margin: { bottom: 1rem * $font-line-height; }
+  > * { display: inline; }
+  > ::after { content: "\A|\A"; }
+  > :last-child::after { content: none; }
 }
 
 .blog-header {
@@ -46,36 +71,31 @@
   &__title {
     margin-top: 0;
     margin-bottom: 0;
+    @extend .nio-heading, .nio-heading--secondary;
   }
 }
 
 
 .nio-article {
   &__byline {
-    color: $color-light;
+    @extend .centered-content-area, .byline-common;
     text-align: right;
-    @extend .centered-content-area;
-    &-author, &-posted { display: inline; }
-    > ::after { content: "\A|"; }
-    > :last-child::after { content: none; }
-    &:empty { display: none; }
-    &:blank { display: none; }
   }
 
-  &__content { @extend .centered-content-area; }
+  &__content { @extend .nio-html, .centered-content-area; }
 
-  > h1:first-child {
-    margin-top: 0;
-    margin-bottom: 2rem * $font-line-height;
-    padding-top: 6rem * $font-line-height;
-    padding-bottom: 2rem * $font-line-height;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  &__title {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 1rem * $font-line-height;
     background-image: linear-gradient(180deg, rgba(black, 0.80), rgba(black, 0.25)), url('images/home.png');
     background-attachment: scroll, fixed;
     background-size: cover;
     background-position: center center;
-    @extend .nio-heading--inverted;
+    > h1 {
+      @extend .centered-content-area;
+      @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted, .nio-heading--centered;
+    }
   }
 }
 

@@ -3,6 +3,8 @@
 @import "./scss/blog";
 @import "./scss/guide";
 
+:root { @extend .nio-sans; }
+
 //*********************
 
 figure {
@@ -15,6 +17,7 @@ figure {
 
   & > figcaption {
     font-size: $font-size-small;
+    font-weight: 600;
     position: absolute;
     top: 100%; right: 0;
     margin-top: $dist-thin;
@@ -22,19 +25,13 @@ figure {
     padding-right: $dist-normal;
     color: $color-mid;
   }
-
-
 }
 
 .examples {
-  @extend .nio-boxed, .nio-boxed--bordered;
-  margin-left: auto;
-  margin-right: auto;
   @media screen and (min-width: $size-desktop) { margin-left: 0; }
+  @extend .nio-boxed, .nio-boxed--bordered;
 
-  &--dark {
-    background-color: #333;
-  }
+  &--dark { background-color: #333; }
 }
 
 
