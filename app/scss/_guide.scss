@@ -40,8 +40,12 @@ $logo-height: 10ch;
   padding-left: $dist-large;
 
   &--child {
-    &:link, &:visited { @extend .nio-link; }
-    &::before { content: "\f054\a"; font-family: fontawesome; font-size: $font-size-small; vertical-align: middle; }
+    font-size: $font-size-small;
+    &:link, &:visited {
+      @extend .nio-link;
+      &:hover { background-color: $color-red; color: $color-white; }
+    }
+    &::before { content: "\f054\a"; font-family: fontawesome; font-size: $font-size-tiny; vertical-align: middle; }
     padding-left: $dist-large * 2;
   }
 }
