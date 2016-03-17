@@ -5,6 +5,8 @@
   margin-left: auto; margin-right: auto;
 }
 
+#disqus_thread { @extend .centered-content-area; }
+
 // archive
 .blog-list {
   @extend .nio-list, .nio-html, .centered-content-area;
