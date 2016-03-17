@@ -13,7 +13,9 @@
     "lint": "eslint app/",
     "test": "mocha",
     "verify": "eslint app/ && mocha",
-    "clean": "rm -rf public/"
+    "clean": "rm -rf public/",
+    "sync": "rsync -avzhe ssh --progress --delete public/ n.io:~/subdomains/design",
+    "deploy": "npm run clean && brunch b -p && npm run sync"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",
