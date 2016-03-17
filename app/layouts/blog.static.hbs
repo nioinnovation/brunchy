@@ -2,29 +2,51 @@
 _options:
   layout: app/layouts/root.static.hbs
 ---
-<main class="blog-entry">
-<header class="blog-entry__fit blog-header">
-  <div class="blog-header__content">
-  <svg class="blog-header__logo" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#nio-logo--wide" /></svg>
-  <h1 class="blog-header__title">Design Blog</h1>
+<main class="nio-longform">
+<header class="nio-longform__fit nio-longform-header">
+  <div class="nio-longform-header__content">
+  <svg class="nio-longform-header__logo" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#nio-logo--wide" /></svg>
+  <h1 class="nio-longform-header__title">Design Blog</h1>
   </div>
 </header>
-<article class="blog-entry__fill nio-article">
+<article class="nio-longform__fill nio-longform-article">
   {{#if title ~}}
-    <div class="nio-article__title">
+    <div class="nio-longform-article__title">
       <h1>{{title}}</h1>
     </div>
   {{/if}}
-  <div class="nio-article__byline">
-    {{~#if author}}<div class="nio-article__byline-author">by {{author}}</div>{{/if~}}
-    {{~#if posted}}<div class="nio-article__byline-posted">{{moment posted}}</div>{{/if~}}
+  <div class="nio-longform-article__byline">
+    {{~#if author}}<div class="nio-longform-article__byline-author">by {{author}}</div>{{/if~}}
+    {{~#if posted}}<div class="nio-longform-article__byline-posted">{{moment posted}}</div>{{/if~}}
   </div>
-  <div class="nio-article__content">
+  <div class="nio-longform-article__content">
   {{content}}
   </div>
 </article>
-<footer class="blog-entry__fit blog-footer">
-  <div class="blog-footer__content">
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//niodesignblog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<footer class="nio-longform__fit nio-longform-footer">
+  <div class="nio-longform-footer__content">
     Powered by n.io
   </div>
 </footer>

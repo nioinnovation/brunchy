@@ -1,0 +1,33 @@
+.link-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    @extend .nio-heading, .nio-heading--primary;
+
+    box-sizing: border-box;
+    width: 33vw;
+    height: 33vw / $phi;
+
+    min-width: 20rem;
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    margin-left: $dist-small;
+    margin-right: $dist-small;
+
+    &::before {
+      font-family: fontawesome;
+      font-size: $font-size-xx-large;
+      margin-right: 1ch;
+      vertical-align: middle;
+    }
+
+    &--code::before { content: "\f121\a"; }
+    &--chat::before { content: "\f086\a"; }
+  }
+}

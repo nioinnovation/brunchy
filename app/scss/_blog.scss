@@ -25,7 +25,7 @@
 
 .confused { @extend .nio-html, .centered-content-area; }
 
-.blog-entry {
+.nio-longform {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -44,7 +44,7 @@
   > :last-child::after { content: none; }
 }
 
-.blog-header {
+.nio-longform-header {
   padding-bottom: $dist-huge;
   padding-top: $dist-huge;
 
@@ -76,7 +76,7 @@
 }
 
 
-.nio-article {
+.nio-longform-article {
   &__byline {
     @extend .centered-content-area, .byline-common;
     text-align: right;
@@ -99,7 +99,7 @@
   }
 }
 
-.blog-footer {
+.nio-longform-footer {
   text-align: center;
   background-color: #eee;
   padding-top: 2rem;
