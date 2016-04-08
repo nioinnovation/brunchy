@@ -28,7 +28,7 @@
     "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
     "uglify-js-brunch": "^2.0.0",
     "mocha": "^2.0.1",
-    "chai": "^1.9.2"
+    "chai": "^3.0.0"
   },
   "dependencies": {
     "cellx": "^1.5.11",
