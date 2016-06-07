@@ -1,15 +1,8 @@
-.centered-content-area {
-  width: 75vw;
-  max-width: 50rem;
-  min-width: 25rem;
-  margin-left: auto; margin-right: auto;
-}
-
-#disqus_thread { @extend .centered-content-area; }
+#disqus_thread { @extend %centered-content-area; }
 
 // archive
 .blog-list {
-  @extend .nio-list, %nio-html, .centered-content-area;
+  @extend .nio-list, %nio-html, %centered-content-area;
 
   .blog-summary {
     &__title {
@@ -25,7 +18,7 @@
   }
 }
 
-.confused { @extend %nio-html, .centered-content-area; }
+.confused { @extend %nio-html, %centered-content-area; }
 
 .nio-longform {
   display: flex;
@@ -57,7 +50,7 @@
   color: mix(black, $color-header, 80);
 
   &__content {
-    @extend .centered-content-area;
+    @extend %centered-content-area;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,11 +73,14 @@
 
 .nio-longform-article {
   &__byline {
-    @extend .centered-content-area, .byline-common;
+    @extend %centered-content-area, .byline-common;
     text-align: right;
   }
 
-  &__content { @extend %nio-html, .centered-content-area; }
+  &__content {
+    @extend %nio-html, %centered-content-area;
+    img { max-width: 100%; }
+  }
 
   &__title {
     padding-top: 1px;
@@ -95,7 +91,7 @@
     background-size: cover;
     background-position: center center;
     > h1 {
-      @extend .centered-content-area;
+      @extend %centered-content-area;
       @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted, .nio-heading--centered;
     }
   }
@@ -109,7 +105,7 @@
   font-size: $font-size-small;
   margin-top: 1rem;
   &__content {
-    @extend .centered-content-area;
+    @extend %centered-content-area;
   }
 }
 
