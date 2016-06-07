@@ -2,6 +2,8 @@
 title: How to make a responsive, dynamic logo
 author:  Jenny Knuth
 posted: 20160607
+summary:
+  How to style a header with different logo sizes so the logo always looks crisp.
 _options:
   layout: app/layouts/blog.static.hbs
 ---
