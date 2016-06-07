@@ -44,13 +44,13 @@ Let's say I have some CSS that looks like this:
 
 Now, let's want an element that is both a header and colorized:
 
-```
+```html
 <div class="header colorize"> <!-- content --> </div>
 ```
 
 Everything is cool. However, let's consider a future iteration&mdash;a designer wants to expand the visual vocabulary&ndash;and wants to make a primary header, it might be tempting to make a conjoined CSS class:
 
-```
+```scss
 .header {
   font-size: 2rem;
   font-weight: bold;
@@ -62,7 +62,7 @@ Everything is cool. However, let's consider a future iteration&mdash;a designer 
 
 Meanwhile, another developer isn't keen on rainbows, and wants to make a colorize that only uses primary colors:
 
-```
+```scss
 .colorize {
   background-image: linear-gradient(0deg, red, orange, yellow, green, cyan, blue, violet);
 }
@@ -74,7 +74,7 @@ Meanwhile, another developer isn't keen on rainbows, and wants to make a coloriz
 
 Now, how do we say we want a "Primary Heading" without saying that we want a "Primary Colorizer", or vice versa? <abbr title="Block Element Modifier">BEM</abbr> get's around this by contextualizing modifiers as being textually dependent on the thing they are modifying:
 
-```
+```scss
 .header {
   font-size: 2rem;
   font-weight: bold;
@@ -95,17 +95,17 @@ Now, how do we say we want a "Primary Heading" without saying that we want a "Pr
 
 There are some concerns about the repetitive nature of BEM and its *impact* on the readability of the DOM. Borrowing from the example before:
 
-```
+```html
 <div class="header header--primary colorize colorize--primary"> <!-- content --> </div>
 ```
 
 However, using a CSS preprocessor&mdash;like SCSS or LESS&mdash;some of these concerns can be mitigated by using semantic classes that map to domain specific content:
 
-```
+```html
 <div class="fresh-news"> <!-- content --> </div>
 ```
 
-```
+```scss
 .fresh-news {
   @extend .header, .header--primary;
   @extend .colorize, .colorize--primary;
@@ -116,7 +116,7 @@ However, using a CSS preprocessor&mdash;like SCSS or LESS&mdash;some of these co
 
 SCSS can also be leveraged to improve the maintainability of BEM by using the `&` selector:
 
-```
+```scss
 .header {
   font-size: 2rem;
   font-weight: bold;
