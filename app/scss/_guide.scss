@@ -90,7 +90,7 @@ $logo-height: 10ch;
     font-size: $font-size-small;
     margin-top: 1rem;
     &__content {
-      @extend .centered-content-area;
+      @extend %centered-content-area;
     }
   }
 }

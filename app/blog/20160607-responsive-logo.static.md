@@ -26,7 +26,7 @@ For example, to display a larger size, a smaller size, and 2x resolution you wil
 
 Grab the element that is your image tag. Some sample code for your SCSS with the standard size, the smaller 'fixed' or 'sticky' size, and the media query for retina (2x) resolution/pixel-ratio for both of those might look like this:
 
-```
+```scss
 #logo {
 	position: relative;
 	background-image: url('./images/logo_standard.png');

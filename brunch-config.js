@@ -19,7 +19,7 @@ module.exports = {
     },
     sass: {
       mode: 'native',
-      options: { includePaths: ['node_modules/nio-scss/scss'] },
+      options: { includePaths: ['node_modules/nio-scss/scss', 'node_modules/prismjs/themes'] },
       functions: require('nio-scss')
     },
     static: {

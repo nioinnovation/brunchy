@@ -7,9 +7,11 @@ $font-family-mono: 'Source Code Pro', Consolas, "Liberation Mono", Menlo, Courie
 
 @import "nio/all";
 
+@import "./scss/helpers";
 @import "./scss/index";
 @import "./scss/blog";
 @import "./scss/guide";
+@import "prism";
 
 :root { @extend .nio-sans; }
 

@@ -37,5 +37,8 @@
     "sass-brunch": "^2.6.3",
     "uglify-js-brunch": "^2.0.0",
     "yaml-front-matter": "^3.4.0"
+  },
+  "dependencies": {
+    "prismjs": "^1.5.1"
   }
 }
