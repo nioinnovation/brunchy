@@ -8,7 +8,7 @@ You can create a primary heading using the `.nio-heading` class; this base heade
 
 Example Usage:
 
-```
+```html
 <div class="nio-heading">Standard Heading</div>
 ```
 
@@ -46,7 +46,8 @@ Example Usage:
 </figure>
 
 However, it is preferred to mix this helper into a specific selector with SCSS.
-```
+
+```scss
 [selector] { @extend .nio-heading, .nio-heading--primary; }
 ```
 
@@ -68,7 +69,7 @@ Headings can be centered using the `.nio-heading--centered`.
 For dark backgrounds, you can add the `.nio-heading--inverted` class to increase readability against dark backgrounds. Again, mixins are preferred over HTML classes.
 
 
-```
+```scss
 [selector] {
   @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted, .nio-heading--centered;
 }

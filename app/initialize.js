@@ -1,5 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function init() {
-  // do your setup here
+  var Prism = require('prismjs');
+  require('prismjs/components/prism-scss');
+  Prism.highlightAll();
 });
