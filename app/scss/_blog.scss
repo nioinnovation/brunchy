@@ -9,7 +9,7 @@
 
 // archive
 .blog-list {
-  @extend .nio-list, .nio-html, .centered-content-area;
+  @extend .nio-list, %nio-html, .centered-content-area;
 
   .blog-summary {
     &__title {
@@ -25,7 +25,7 @@
   }
 }
 
-.confused { @extend .nio-html, .centered-content-area; }
+.confused { @extend %nio-html, .centered-content-area; }
 
 .nio-longform {
   display: flex;
@@ -84,7 +84,7 @@
     text-align: right;
   }
 
-  &__content { @extend .nio-html, .centered-content-area; }
+  &__content { @extend %nio-html, .centered-content-area; }
 
   &__title {
     padding-top: 1px;

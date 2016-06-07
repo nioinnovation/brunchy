@@ -43,7 +43,7 @@ $logo-height: 10ch;
     font-size: $font-size-small;
     &:link, &:visited {
       @extend .nio-link;
-      &:hover { background-color: $color-red; color: $color-white; }
+      &:hover { background-color: $color-nio; color: $color-white; }
     }
     &::before { content: "\f054\a"; font-family: fontawesome; font-size: $font-size-tiny; vertical-align: middle; }
     padding-left: $dist-large * 2;
@@ -62,10 +62,10 @@ $logo-height: 10ch;
   border-left: $dist-hair solid $color-mid;
 
   &__title {
-    background-color: $color-red;
+    background-color: $color-nio;
     background-attachment: fixed;
     background-image: linear-gradient(4.2deg, rgba(darken($color-info, 20%),0.3) 70%, transparent, rgba(0,0,0,0.5));
-    border-bottom: $dist-normal solid mix($color-red, black, 25);
+    border-bottom: $dist-normal solid mix($color-nio, black, 25);
     text-align: left;
     > h1 {
       @extend .nio-heading, .nio-heading--primary, .nio-heading--inverted;
@@ -75,7 +75,7 @@ $logo-height: 10ch;
   }
 
   &__content {
-    @extend .nio-html;
+    @extend %nio-html;
     padding-left: 4rem;
     padding-right: 4rem;
     min-width: 40rem;
@@ -96,7 +96,7 @@ $logo-height: 10ch;
 }
 
 
-@media screen and (max-width: $size-mobile) {
+@media screen and (max-width: $size-tablet) {
   .guide-header { position: static; }
   .guide-panel { position: static; }
   .guide-sidebar { position: static; width: auto; border-bottom: $dist-hair solid black; padding-bottom: $font-line-height * 1rem; }
