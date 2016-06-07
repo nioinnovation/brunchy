@@ -1,5 +1,4 @@
 module.exports = {
-  paths: { public: 'public', watched: ['app', 'node_modules/nio-scss/scss'] },
   files: {
     javascripts: { joinTo: 'app.js' },
     stylesheets: { joinTo: 'app.css' }
