@@ -26,7 +26,9 @@ module.exports = {
       processors: [
         require('html-brunch-static')({
           handlebars: { enableProcessor: true, helpers: require('./helpers/hbs') },
-          processors: [ require('marked-brunch-static')() ]
+          processors: [ require('marked-brunch-static')({
+            highlight: require('./helpers/highlighter')
+          }) ]
         })
       ]
     }
