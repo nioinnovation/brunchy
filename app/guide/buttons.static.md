@@ -4,67 +4,96 @@ _options:
   layout: app/layouts/guide.static.hbs
 ---
 
-The default button class can be applied by using the `.nio-button` class, which will be a netural
-button with the default button stylings.
+Buttons can be used for actions in forms, dialogs, links, and more.
 
-```
-<button class="nio-button">default</button>
-```
+## Buttons (stable)
 
 <figure class="examples">
-  <figcaption>Default button</figcaption>
+  <figcaption>nio button options</figcaption>
   <button class="nio-button">default</button>
-</figure>
-
-There are four colored variants:
-
-* `--primary`
-* `--warning`
-* `--info`
-* `--danger`
-
-```
-<button class="nio-button nio-button--primary">primary</button>
-<button class="nio-button nio-button--info">info</button>
-<button class="nio-button nio-button--warning">warning</button>
-<button class="nio-button nio-button--danger">danger</button>
-```
-
-<figure class="examples">
-  <figcaption>Colors</figcaption>
+  <br>
   <button class="nio-button nio-button--primary">primary</button>
   <button class="nio-button nio-button--info">info</button>
   <button class="nio-button nio-button--warning">warning</button>
   <button class="nio-button nio-button--danger">danger</button>
+  <button class="nio-button nio-button--alt">alt (primary)</button>
 </figure>
 
-You can add the default icons to these button by adding the `.nio-button--with-icon` modifier.
-
+```html
+<button class="nio-button">default</button>
+<button class="nio-button nio-button--primary">primary</button>
+<button class="nio-button nio-button--info">info</button>
+<button class="nio-button nio-button--warning">warning</button>
+<button class="nio-button nio-button--danger">danger</button>
+<button class="nio-button nio-button--alt">alt (primary)</button>
 ```
+### Component overview
+
+#### .nio-button
+extends `.nio-bordered`
+
+`$font-sans` is used to set the font
+
+`$color-default` is used to set the color
+
+`$dist-large` is used to set the padding
+
+#### Modifiers
+`--primary`
+
+`$color-primary` is used to set the color
+
+`--alt`, `--danger`
+
+`$color-danger` is used to set the color
+
+`--warning`
+`$color-warning` is used to set the color
+
+`--info`
+`$color-info` is used to set the color
+
+### Interactions
+`hover` and `focus` transition/transform the box-shadow `$dist-normal` and increase the scale
+
+`active` transitions/transforms the element down `$dist-hair`
+
+
+### Extend it
+
+## Buttons with icons (prototypical)
+
+<figure class="examples">
+<figcaption>nio buttons with icons</figcaption>
 <button class="nio-button nio-button--with-icon nio-button--primary">primary</button>
 <button class="nio-button nio-button--with-icon nio-button--info">info</button>
 <button class="nio-button nio-button--with-icon nio-button--warning">warning</button>
 <button class="nio-button nio-button--with-icon nio-button--danger">danger</button>
-```
-
-<figure class="examples">
-  <figcaption>Iconed colors</figcaption>
-  <button class="nio-button nio-button--with-icon nio-button--primary">primary</button>
-  <button class="nio-button nio-button--with-icon nio-button--info">info</button>
-  <button class="nio-button nio-button--with-icon nio-button--warning">warning</button>
-  <button class="nio-button nio-button--with-icon nio-button--danger">danger</button>
+<button class="nio-button nio-button--with-icon nio-button--alt">alt with icon</button>
 </figure>
 
-There is also a red button that can be used as a primary action, by using the `.nio-button--alt` modifier. However, avoid using both an `--alt` and `--danger` button in the same set to avoid confusion.
-
-
-```
-<button class="nio-button nio-button--alt">alt</button>
+```html
+<button class="nio-button nio-button--with-icon nio-button--primary">primary</button>
+<button class="nio-button nio-button--with-icon nio-button--info">info</button>
+<button class="nio-button nio-button--with-icon nio-button--warning">warning</button>
+<button class="nio-button nio-button--with-icon nio-button--danger">danger</button>
 <button class="nio-button nio-button--with-icon nio-button--alt">alt with icon</button>
 ```
 
+## Button bar
 <figure class="examples">
-  <figcaption>Alternate Primary Button</figcaption>
-  <button class="nio-button nio-button--alt">alt</button>
-  <button class="nio-button nio-button--with-icon nio-button--alt">alt with icon</button>
+<figcaption>nio button bar</figcaption>
+<div class="nio-button-bar">
+  <button class="nio-button nio-button">info</button>
+  <button class="nio-button nio-button--info">warning</button>
+  <button class="nio-button nio-button--alt">danger</button>
+</div>
 </figure>
+
+```html
+<button class="nio-button nio-button--with-icon nio-button--primary">primary</button>
+<button class="nio-button nio-button--with-icon nio-button--info">info</button>
+<button class="nio-button nio-button--with-icon nio-button--warning">warning</button>
+<button class="nio-button nio-button--with-icon nio-button--danger">danger</button>
+<button class="nio-button nio-button--with-icon nio-button--alt">alt with icon</button>
+```
