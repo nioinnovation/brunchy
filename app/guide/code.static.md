@@ -4,23 +4,20 @@ _options:
   layout: app/layouts/guide.static.hbs
 ---
 
-You can represent code using the [.nio-code](#-nio-code) or the [.nio-code-block](#-nio-code-block) classes, depending if the code is one-line or less ([.nio-code](#-nio-code)) or more than one line ([.nio-code-block](#-nio-code-block)).
+The code style is used to represent pre-formatted, mono-spaced type, such as code.
 
-## .nio-code
+## Code
 
-Use for one line of code (or less). It will render in-line.
+<figure class="examples">
+<figcaption>.nio-code</figcaption>
+<div> Here is some text and <span class="nio-code">this is 'nio-code' in a span</span></div>
+</figure>
 
-#### Sample code
 
 ```html
 <div> Here is some text and <span class="nio-code">this is 'nio-code' in a span</span></div>
 ```
 #### How it renders
-
-<figure class="examples">
-  <figcaption>.nio-code</figcaption>
-  <div> Here is some text and <span class="nio-code">this is 'nio-code' in a span</span></div>
-</figure>
 
 #### Constants
 
@@ -42,18 +39,16 @@ Use for one line of code (or less). It will render in-line.
 
 Use for code in shaded boxes.
 
-#### Sample code
-
 ```html
-<div> Here is some text and
+<div class="nio-boxed nio-boxed--shaded"> Here is some text and
 <span class="nio-code nio-code--in-block">this is an example of a span with the classes 'nio-code nio-code--in-block'</span></div>
 ```
-#### How it renders
 
 <figure class="examples">
   <figcaption>.nio-code .nio-code--in-block</figcaption>
-  <div> Here is some text and
-  <span class="nio-code nio-code--in-block">this is an example of a span with the classes 'nio-code nio-code--in-block'</span></div>
+  <div class="nio-boxed nio-boxed--shaded">
+    Here is some text in a shaded box and <span class="nio-code nio-code--in-block">this is an example of a span with the classes 'nio-code nio-code--in-block'</span>
+  </div>
 </figure>
 
 ## .nio-code-block

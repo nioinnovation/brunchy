@@ -54,9 +54,9 @@ extends `.nio-bordered`
 `$color-info` is used to set the color
 
 ### Interactions
-`hover` and `focus` transition/transform the box-shadow `$dist-normal` and increase the scale
+`:hover` and `:focus` transform the box-shadow `$dist-normal` and increase the scale
 
-`active` transitions/transforms the element down `$dist-hair`
+`:active` transforms the element down `$dist-hair`
 
 
 ### Extend it
@@ -91,9 +91,9 @@ extends `.nio-bordered`
 </figure>
 
 ```html
-<button class="nio-button nio-button--with-icon nio-button--primary">primary</button>
-<button class="nio-button nio-button--with-icon nio-button--info">info</button>
-<button class="nio-button nio-button--with-icon nio-button--warning">warning</button>
-<button class="nio-button nio-button--with-icon nio-button--danger">danger</button>
-<button class="nio-button nio-button--with-icon nio-button--alt">alt with icon</button>
+<div class="nio-button-bar">
+  <button class="nio-button nio-button">info</button>
+  <button class="nio-button nio-button--info">warning</button>
+  <button class="nio-button nio-button--alt">danger</button>
+</div>
 ```
