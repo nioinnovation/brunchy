@@ -1,1 +1,11 @@
-@import "nio"
+@import "nio";
+
+body {
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+tr:nth-child(3n+1) {
+  white-space: nowrap;
+}
