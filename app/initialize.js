@@ -46,7 +46,7 @@ function renderRows(data, targetElement, sortByKey, reversed) {
   .append('tr');
 
   row.selectAll('td').data(function(d) {
-    var link = '<a class="nio-link" href=' + d.html_url + '/blob/master/README.md>' + d.name + '</a>';
+    var link = '<a class="nio-link" href=' + d.html_url + '>' + d.name + '</a>';
     var created = moment(d.created_at).format('MMM YYYY');
     var updated = moment(d.updated_at).format('MMM YYYY');
     return [link, d.description, created, updated];

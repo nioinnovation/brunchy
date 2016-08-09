@@ -2,8 +2,12 @@
 
 body {
   font-family: sans-serif;
-  max-width: 1000px;
+  max-width: 70vw;
   margin: 0 auto;
+}
+
+.nio-heading {
+  margin-top: 4.5rem;
 }
 
 tr:nth-child(3n+1) {
