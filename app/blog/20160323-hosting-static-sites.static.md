@@ -73,7 +73,7 @@ We of course want our new site to be available via https. Unfortunately, S3 does
 
 1. Go to [AWS CloudFront](https://console.aws.amazon.com/cloudfront/home?region=us-east-1).
 2. Create a new web distribution for your site.
-3. Enter your bucket's url for the Origin Domain Name. It should look something like `design.n.io.s3-website-us-east-1.amazonaws.com`.
+3. Enter your bucket's url for the Origin Domain Name. It should look something like `design.n.io.s3-website-us-east-1.amazonaws.com`. Just selecting the S3 bucket is not going to be sufficient, you must enter the region-specific bucket URL. The problem with selecting only the bucket is that any subdirectories will not be able to auto-detect an `index.html` page. So you would have to access directory roots like the following `https://design.n.io/blog/index.html` instead of just `https://design.n.io/blog`. See [this thread](http://stackoverflow.com/questions/31017105/how-do-you-set-a-default-root-object-for-subdirectories-for-a-statically-hosted) for more details about this.
 4. Since we are using S3, we want our origin protocol to be HTTP only. Don't worry, our CF distribution will still be available behind https.
 5. For the viewer protocol policy, have it "Redirect HTTP to HTTPS"
 6. Fill out the rest of the distribution settings as you see fit, it is likely the defaults are sufficient though.
