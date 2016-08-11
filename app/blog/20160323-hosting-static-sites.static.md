@@ -36,7 +36,7 @@ Brunch makes it easy to build a static web site, but eventually it comes time to
 
 ## Jenkins - Automatic building using brunch
 
-1. Go to [Jenkins](http://jenkins.nioinstances.com:8081/) and create a new job for this static site.
+1. Go to [Jenkins](http://jenkins.nioinstances.com:8081/) and create a new Freestyle job for this static site. You may need an administrator to create a job for you.
 2. Enable source code management - Select "Git" as the SCM, then enter your repository URL, credentials, and branch to build. You will likely want to use the `neutralioJenkins` credentials that are already loaded in to Jenkins. Here is a screenshot of how this design blog is built - when changes to the `design-blog` branch happen, Jenkins will trigger a build.
 
     ![Jenkins screenshot](/images/build-static-sites/jenkins_screenshot.png)
@@ -51,7 +51,7 @@ npm install
 brunch build --production
 ```
 
-5. Publish your build to S3 - Add a post-build action to publish build artifacts to an S3 bucket. The source files to copy is probably going to be the `public` folder that brunch creates, you can select that folder by entering this for "Source" `public/**/*`. Your destination bucket is the name of the bucket you created earlier. e.g. `design.n.io`.
+5. Publish your build to S3 - Add a post-build action to publish build artifacts to an S3 bucket. The source files to copy is probably going to be the `public` folder that brunch creates, you can select that folder by entering this for "Source" `public/**/*`. Your destination bucket is the name of the bucket you created earlier. e.g. `design.n.io`. The bucket region should be set to `us-east-1`.
 
 6. Save your project and build your job.
 
@@ -78,7 +78,7 @@ We of course want our new site to be available via https. Unfortunately, S3 does
 5. For the viewer protocol policy, have it "Redirect HTTP to HTTPS"
 6. Fill out the rest of the distribution settings as you see fit, it is likely the defaults are sufficient though.
 7. Add your subdomain as an "Alternate Domain Name (CNAME)".
-8. For SSL cetrificate, select "Custom SSL Certificate" and select the verified certificate from the AWS Certificate Manager.
+8. For SSL certificate, select "Custom SSL Certificate" and select the verified certificate from the AWS Certificate Manager.
 9. Fill out any other settings and click Create Distribution
 
 The distribution takes some time to deploy and become available, but once it's done, you should see a cloudfront URL on your distribution from the CloudFront dashboard.
