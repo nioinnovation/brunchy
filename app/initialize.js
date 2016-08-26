@@ -72,7 +72,10 @@ function renderTable(data) {
     .on('click', function() {
       renderRows(data, tableBody, 'name');
     });
-  tableHeader.append('th').html('2.0');
+  tableHeader.append('th').html('2.0')
+    .on('click', function() {
+      renderRows(data, tableBody, 'default_branch', true);
+    });
   tableHeader.append('th').html('Description');
   tableHeader.append('th').html('Created')
     .on('click', function() {
