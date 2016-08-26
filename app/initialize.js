@@ -49,7 +49,9 @@ function renderRows(data, targetElement, sortByKey, reversed) {
     var link = '<a class="nio-link" href=' + d.html_url + '>' + d.name + '</a>';
     var created = moment(d.created_at).format('MMM YYYY');
     var updated = moment(d.updated_at).format('MMM YYYY');
-    return [link, d.description, created, updated];
+    var nio2 = d.default_branch === 'nio2';
+    nio2 = nio2 ? '<div class="check-mark">\u2713<\div>' : '';
+    return [link, nio2, d.description, created, updated];
   })
   .enter()
   .append('td')
@@ -70,6 +72,7 @@ function renderTable(data) {
     .on('click', function() {
       renderRows(data, tableBody, 'name');
     });
+  tableHeader.append('th').html('2.0');
   tableHeader.append('th').html('Description');
   tableHeader.append('th').html('Created')
     .on('click', function() {
