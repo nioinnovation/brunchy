@@ -4,6 +4,8 @@ window.io = require('socket.io-client');
 var axios = require('axios');
 var d3 = require('d3');
 var moment = require('moment');
+var sortedBy;
+var ascending = false;
 
 function parse_link_header(header) {
   if (header.length === 0) {
@@ -27,7 +29,7 @@ function parse_link_header(header) {
 }
 
 function renderRows(data, targetElement, sortByKey, reversed) {
-
+  sortedBy = sortByKey;
   var rows = targetElement.selectAll('tr')
   .data(data, function(d) {
     return d.name;
@@ -70,20 +72,24 @@ function renderTable(data) {
   var tableHeader = repoTable.append('thead').append('tr');
   tableHeader.append('th').html('Block')
     .on('click', function() {
-      renderRows(data, tableBody, 'name');
+      ascending = sortedBy === 'name' ? !ascending : false;
+      renderRows(data, tableBody, 'name', ascending);
     });
   tableHeader.append('th').html('2.0')
     .on('click', function() {
-      renderRows(data, tableBody, 'default_branch', true);
+      ascending = sortedBy === 'default_branch' ? !ascending : true;
+      renderRows(data, tableBody, 'default_branch', ascending);
     });
   tableHeader.append('th').html('Description');
   tableHeader.append('th').html('Created')
     .on('click', function() {
-      renderRows(data, tableBody, 'created_at', true);
+      ascending = sortedBy === 'created_at' ? !ascending : true;
+      renderRows(data, tableBody, 'created_at', ascending);
     });
   tableHeader.append('th').html('Updated')
     .on('click', function() {
-      renderRows(data, tableBody, 'updated_at', true);
+      ascending = sortedBy === 'updated_at' ? !ascending : true;
+      renderRows(data, tableBody, 'updated_at', ascending);
     });
 
   renderRows(data, tableBody);
