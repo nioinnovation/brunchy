@@ -24,7 +24,8 @@ if ($option == 'siteurl' || $option == 'home') {
 	return 'http://127.0.0.1:8888/mysite';
 }
 ```
-- While you are in `wp-includes/option.php`, near the bottom, you might want to also set `WP_DEBUG` to `true` in order to get more descriptive error messages.  
+
+While you are in `wp-includes/option.php`, near the bottom, you might want to also set `WP_DEBUG` to `true` in order to get more descriptive error messages.
 
 4. In `wp-content/plugins` clone down your plugins. You might get these from nioinnovation or from siteground. For example:
 ```
