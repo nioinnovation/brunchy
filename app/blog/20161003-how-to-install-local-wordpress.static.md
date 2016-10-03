@@ -3,14 +3,14 @@ title: How to do a local WordPress install
 author:  Jenny Knuth
 posted: 20161003
 summary:
-  installing and configuring a local version of a WordPress site so you can view changes locally before pushing
+  How to install and configure a local version of a WordPress site so you can view changes locally before pushing.
 _options:
   layout: app/layouts/blog.static.hbs
 ---
 
-To work on a WordPress site locally, you will do a complete WordPress install in a directory on your local machine that is pointing to the hosted database (most likely the staging database). After your install is set up, the only places you will make changes will be in your plugins directory or your themes directory. Your working plugins and themes should be github repos with version control.
+To work locally on a WordPress site, you will create a complete WordPress install in a directory on your local machine, then point this install to the hosted database (most likely the staging database). After your install is set up, the only places you will make changes will be in your plugins directory or your themes directory (both located inside of the `wp-content` folder). Your working plugins and themes should be github repos with version control.
 
-Follow these simple steps:
+To install WordPress locally and point to the hosted database, follow these simple steps:
 
 1. Download correct version of WordPress from [https://wordpress.org/download/](https://wordpress.org/download/). The 'correct' version of WordPress is the version on the live site and is visible in the lower right corner of the live site's Dashboard page.
 
@@ -18,14 +18,14 @@ Follow these simple steps:
 
 3. Change `wp-includes/option.php` by adding the following conditional to the `get_option` method:
 
-```php
-if ($option == 'siteurl' || $option == 'home') {
-	// Replace this URL with however you will access the site locally
-	return 'http://127.0.0.1:8888/mysite';
-}
-```
+  ```php
+  if ($option == 'siteurl' || $option == 'home') {
+  	// Replace this URL with however you will access the site locally
+  	return 'http://127.0.0.1:8888/mysite';
+  }
+  ```
 
-While you are in `wp-includes/option.php`, near the bottom, you might want to also set `WP_DEBUG` to `true` in order to get more descriptive error messages.
+  While you are in `wp-includes/option.php`, near the bottom, you might want to also set `WP_DEBUG` to `true` in order to get more descriptive error messages.
 
 4. In `wp-content/plugins` clone down your plugins. You might get these from nioinnovation or from siteground. For example:
 ```
