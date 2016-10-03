@@ -70,31 +70,46 @@ function renderTable(data) {
   var tableBody = repoTable.append('tbody');
 
   var tableHeader = repoTable.append('thead').append('tr');
-  tableHeader.append('th').html('Block')
+  var blockHeader = tableHeader.append('th').html('Block')
     .on('click', function() {
       ascending = sortedBy === 'name' ? !ascending : false;
       renderRows(data, tableBody, 'name', ascending);
+      toggleClasses(blockHeader, ascending, 'name');
     });
-  tableHeader.append('th').html('2.0')
+
+  var defaultHeader = tableHeader.append('th').html('2.0')
     .on('click', function() {
       ascending = sortedBy === 'default_branch' ? !ascending : true;
       renderRows(data, tableBody, 'default_branch', ascending);
+      toggleClasses(defaultHeader, ascending, 'default_branch');
     });
+
   tableHeader.append('th').html('Description');
-  tableHeader.append('th').html('Created')
+
+  var createdHeader = tableHeader.append('th').html('Created')
     .on('click', function() {
       ascending = sortedBy === 'created_at' ? !ascending : true;
       renderRows(data, tableBody, 'created_at', ascending);
+      toggleClasses(createdHeader, ascending, 'created_at');
     });
-  tableHeader.append('th').html('Updated')
+
+  var updatedHeader = tableHeader.append('th').html('Updated')
     .on('click', function() {
       ascending = sortedBy === 'updated_at' ? !ascending : true;
       renderRows(data, tableBody, 'updated_at', ascending);
+      toggleClasses(updatedHeader, ascending, 'updated_at');
     });
 
   renderRows(data, tableBody);
 
   return repoTable;
+}
+
+function toggleClasses(headerEl, ascending, category) {
+  headerEl.classed({
+      'up': ascending,
+      'down': !ascending
+    })
 }
 
 document.addEventListener('DOMContentLoaded', function init() {
