@@ -17,23 +17,23 @@
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
-    "autoprefixer": "^6.4.0",
+    "autoprefixer": "^6.5.0",
     "chai": "^3.5.0",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
-    "eslint": "^3.4.0",
-    "eslint-brunch": "^3.8.0",
+    "eslint": "^3.7.1",
+    "eslint-brunch": "^3.11.1",
     "javascript-brunch": "^2.0.0",
     "jsenv-brunch": "^2.0.0",
-    "mocha": "^3.0.2",
+    "mocha": "^3.1.0",
     "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
-    "postcss-brunch": "^2.0.1",
-    "sass-brunch": "^2.6.3",
+    "postcss-brunch": "^0.5.0",
+    "sass-brunch": "^2.7.0",
     "uglify-js-brunch": "^2.0.1"
   },
   "dependencies": {
-    "d3": "^3.5.17",
-    "lodash": "^4.15.0",
+    "d3": "^4.2.6",
+    "lodash": "^4.16.3",
     "niojs": "^1.1.5",
     "socket.io-client": "^1.4.8"
   }
