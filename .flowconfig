@@ -1,0 +1,11 @@
+[ignore]
+.*/public/.*
+
+[include]
+
+[libs]
+./node_modules/fbjs/flow/lib
+
+[options]
+module.use_strict=true
+suppress_type=$FlowIssue

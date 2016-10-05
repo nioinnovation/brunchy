@@ -14,12 +14,15 @@ module.exports = {
     noPushState: true,
   },
   plugins: {
+    babel: {
+      pattern: /\.jsx?$/
+    },
     eslint: {
-      pattern: /^app\/.*\.js$/
+      pattern: /^app\/.*\.jsx?$/
     },
     postcss: {
       processors: [
-        require('autoprefixer')(['last 2 versions'])
+        require('autoprefixer')({ browsers: ['> 5%', 'last 2 versions'] })
       ]
     },
     sass: {
