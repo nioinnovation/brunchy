@@ -68,9 +68,9 @@ http://brunch.io/
 
 ##Make Your Workspace!
 1. In the console at the root: `mkdir workspace`
-2. Create a custom directory name for your project in workspace
-3. Copy project link in GitHub then open your terminal and type:
-`git clone "your-project-link"`
+2. Copy project link in GitHub then open your terminal and type:
+`git clone <paste-project-link> <desired-directory-name> `
+3. Navigate into project directory 
 4. Run brunch from your project in your workspace with:
 `brunch watch --server` 
 
