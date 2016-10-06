@@ -1,5 +1,5 @@
 ---
-title: How to update WordPress
+title: How to update a WordPress Theme
 author:  Jenny Knuth
 posted: 20161004
 summary:
@@ -44,9 +44,11 @@ For each device/magnification check:
 - All pages
 - Spacing
 - Colors
+- Typography
 - Buttons
 - Links
 - Forms
+- Videos
 
 Try to break staging.
 
