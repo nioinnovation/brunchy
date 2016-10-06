@@ -36,6 +36,6 @@ http://dillinger.io/
 This one seems nice but I've never used it. There's a lot out there so feel free to find your favorite!
 
 ##Not Savvy with GitHub?
-Maybe GitHub, Terminal and Text Editors aren't your thing? Go ahead and use an online editor and provide the file to someone on the dev team- we can help you go over it and post it!
+Maybe GitHub, Terminal and Text Editors aren't your thing? Go ahead and use an online editor and provide the file to someone on the dev team—we can help you go over it and post it!
 
 
