@@ -25,7 +25,7 @@ https://www.sublimetext.com/
 ## Let’s Install Homebrew!
 http://brew.sh/index.html
 
-Paste this into your terminal window at the root level:
+Paste this into your terminal:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
@@ -61,21 +61,20 @@ Generate a new key by typing:
 ## Let’s Install Brunch!
 http://brunch.io/
 1. Type in the console: 
-`brunch install -g`
-*Potential pitfalls: If you have issues installing brunch, try uninstalling node and reinstalling it
-2. Now install your dependencies with: 
-`npm install`
-*Potential pitfalls: If you don’t seem to have all the dependencies you need, delete the node_modules folder and reinstall npm
+`npm install -g brunch`
+
+**Potential pitfalls: If you have issues installing brunch, try uninstalling node and reinstalling it. If you don’t seem to have all the dependencies you need, delete the node_modules folder and reinstall npm*
 
 
 ##Make Your Workspace!
 1. In the console at the root: `mkdir workspace`
-2. Copy project link in GitHub then open your terminal and type:
+2. Create a custom directory name for your project in workspace
+3. Copy project link in GitHub then open your terminal and type:
 `git clone "your-project-link"`
-3. Run brunch from your project in your workspace with:
+4. Run brunch from your project in your workspace with:
 `brunch watch --server` 
 
-Navigate in your browser to localhost:8080 and your project should be live!
+Navigate in your browser to localhost:8080 and your project should be visually up!
 
 
 
