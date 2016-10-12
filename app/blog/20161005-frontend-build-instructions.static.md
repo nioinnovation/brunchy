@@ -1,0 +1,85 @@
+---
+title: Welcome to the n.io Front-End Team!
+author:  Trisha Allin
+posted: 20161005
+summary:
+  Everything you need to get your front-end build up and running.
+_options:
+  layout: app/layouts/blog.static.hbs
+---
+
+
+## Install your favorite shell script and text editor!
+#### Feel free to use whichever terminal shell and text editor you work with best.
+
+Recommendations:
+1. Shell script: zsh/oh-my-zsh<br>
+This shell allows you to theme, has helpful plug-ins and shows you which branch you are on.
+https://github.com/robbyrussell/oh-my-zsh
+2. Text editor: Sublime Text, Atom<br>
+Patrick will probably supply you with sublime… but here’s the link just in case
+https://www.sublimetext.com/
+
+
+
+## Let’s Install Homebrew!
+Reference:<br>
+http://brew.sh/index.html
+
+Paste this into your terminal:
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+
+## Let’s Install Node.js!
+Reference:<br>
+https://nodejs.org/en/
+
+Now that you have Homebrew all you have to do is type in the terminal:
+
+`brew install node`
+
+## Let’s Get Synced with GitHub!
+### Generate your ssh key
+Reference:<br>
+https://help.github.com/articles/generating-an-ssh-key/
+1. See if you already have an ssh key by typing in terminal: `ls -al ~/.ssh`
+2. Generate a new key by typing: 
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com". `
+3. Press Enter to accept default location
+4. Choose and enter a passphrase
+
+### Add your ssh key to the agent 
+1. Make sure ssh agent is enabled by typing: 
+	`eval "$(ssh-agent -s)"`
+
+2. Add ssh key to the agent by typing: 
+	`ssh-add ~/.ssh/id_rsa`
+
+### Copy Key to GitHub Account
+1. Copy key to clipboard by typing: 
+	`pbcopy < ~/.ssh/id_rsa.pub`
+2. Paste key in the settings menu in GitHub
+
+
+## Let’s Install Brunch!
+Reference:<br>
+http://brunch.io/
+1. Type in the console: 
+`npm install -g brunch`
+
+*Potential pitfalls: If you have issues installing brunch, try uninstalling node and reinstalling it. If you don’t seem to have all the dependencies you need, delete the node_modules folder and reinstall npm*
+
+
+## Make Your Workspace!
+1. In the console at the root: `mkdir workspace`
+2. Copy project link in GitHub then open your terminal and type:<br>
+`git clone <paste-project-link> <desired-directory-name> `
+3. Navigate into project directory 
+4. Run brunch from your project in your workspace with:
+`brunch watch --server` 
+
+### Navigate in your browser to localhost:8080 and your project should be visually up!
+
+
+
