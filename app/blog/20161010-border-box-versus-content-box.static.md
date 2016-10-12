@@ -15,11 +15,25 @@ As can be imagined, this can be slightly confusing when the box that appears in 
 
 Therefore, when responsive design began to gain popularity, the `box-sizing` attribute was created.
 
+## box-sizing: content-box
+
+When `box-sizing` is set to `content-box`, the original way css dealt with borders and padding is reflected.
+
+For example, I have the following css:
+```
+box-sizing: content-box;
+width: 100px;
+height: 100px;
+border: 5px solid black;
+padding: 10px;
+```
+The actual element will render with a width and height of 100px, with 10px of padding on each side before the border is rendered. In this case, the element will appear to have a width and height of 130px each.
+
 ## box-sizing: border-box
 
-Now, when the `box-sizing` css attribute is set to `border-box`, the element's width and height are not affected by additional padding or borders.
+On the other hand, when the `box-sizing` css attribute is set to `border-box`, the element's width and height are not affected by additional padding or borders.
 
-For example, if I have the following css:
+If instead, I have the following css:
 
 ```
 box-sizing: border-box;
@@ -30,22 +44,9 @@ padding: 10px;
 ```
 The element will be surrounded with a border that has an outer width and height of 100px each, followed by 10px of padding on each side, and then the element sits in the middle. This will make the actual element look as if it has a width and height of 70px.
 
-## box-sizing: content-box
-
-On the other hand, when `box-sizing` is set to `content-box`, the original way css dealt with borders and padding is reflected.
-
-If instead, I have the following css:
-```
-box-sizing: content-box;
-width: 100px;
-height: 100px;
-border: 5px solid black;
-padding: 10px;
-```
-The actual element will render with a width and height of 100px, with 10px of padding on each side before the border is rendered. In this case, the element will appear to have a width and height of 130px each.
-
 ## Example
 
-The following image shows the two different methods. The left hand element is the first case (`border-box`), the middle blue box has a width and height of 100px to relate the other two images to, and the right hand element is the second case (`content-box`).
+The following example shows the two different methods. The left hand element is the first case (`content-box`), the middle blue box has a width and height of 100px to relate the other two images to, and the right hand element is the second case (`border-box`).
 
-![](/images/box-sizing/content-vs-border-box.png)
+<p data-height="265" data-theme-id="0" data-slug-hash="bwKZry" data-default-tab="result" data-user="kyliedale" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/kyliedale/pen/bwKZry/">Box-sizing blog</a> by Kylie Dale (<a href="http://codepen.io/kyliedale">@kyliedale</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
