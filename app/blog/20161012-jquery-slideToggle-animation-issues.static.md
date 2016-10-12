@@ -18,14 +18,14 @@ We were using it to show and hide a nav drawer. The code for opening the nav dra
 
 ```
 jQuery('.header__nav').slideToggle('slow');
-jQuery('header.header, .nav-toggle').addClass('open active');
+jQuery('header.header, .nav-toggle').addClass('open');
 ```
 
 And the code to close the nav drawer looked like:
 
 ```
 jQuery('.header__nav').slideToggle('slow');
-jQuery('header.header, .nav-toggle').removeClass('open active');
+jQuery('header.header, .nav-toggle').removeClass('open');
 ```
 
 ## the problem
@@ -36,7 +36,7 @@ This was caused by the `addClass` or `removeClass` function calls right after `s
 
 ## more concrete example
 
-In the use case above, the `open` and `active` classes have certain styles assigned to them. For example, when the `open` class is removed from the nav element, the nav has:
+In the use case above, the `open` class has certain styles assigned to it. For example, when the `open` class is removed from the nav element, the nav has:
 
 ```
 display: none
