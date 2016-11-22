@@ -44,20 +44,20 @@ Now that you have Homebrew all you have to do is type in the terminal:
 Reference:<br>
 https://help.github.com/articles/generating-an-ssh-key/
 1. See if you already have an ssh key by typing in terminal: `ls -al ~/.ssh`
-2. Generate a new key by typing: 
+2. Generate a new key by typing:
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com". `
 3. Press Enter to accept default location
 4. Choose and enter a passphrase
 
-### Add your ssh key to the agent 
-1. Make sure ssh agent is enabled by typing: 
+### Add your ssh key to the agent
+1. Make sure ssh agent is enabled by typing:
 	`eval "$(ssh-agent -s)"`
 
-2. Add ssh key to the agent by typing: 
+2. Add ssh key to the agent by typing:
 	`ssh-add ~/.ssh/id_rsa`
 
 ### Copy Key to GitHub Account
-1. Copy key to clipboard by typing: 
+1. Copy key to clipboard by typing:
 	`pbcopy < ~/.ssh/id_rsa.pub`
 2. Paste key in the settings menu in GitHub
 
@@ -65,7 +65,7 @@ https://help.github.com/articles/generating-an-ssh-key/
 ## Let’s Install Brunch!
 Reference:<br>
 http://brunch.io/
-1. Type in the console: 
+1. Type in the console:
 `npm install -g brunch`
 
 *Potential pitfalls: If you have issues installing brunch, try uninstalling node and reinstalling it. If you don’t seem to have all the dependencies you need, delete the node_modules folder and reinstall npm*
@@ -75,11 +75,15 @@ http://brunch.io/
 1. In the console at the root: `mkdir workspace`
 2. Copy project link in GitHub then open your terminal and type:<br>
 `git clone <paste-project-link> <desired-directory-name> `
-3. Navigate into project directory 
+3. Navigate into project directory
 4. Run brunch from your project in your workspace with:
-`brunch watch --server` 
+`brunch watch --server`
 
 ### Navigate in your browser to localhost:8080 and your project should be visually up!
 
+## Why do n.io repositories have so many branches?
+In the past GitHub limited the number of private repositories an account could create.  To circumvent that restriction n.io used branches of an individual repo as separate "repos" leading to the organization you'll find on GitHub today.
 
+In May 2016 GitHub eliminated that restriction so the hack used in the past is no longer necessary and projects are slowly being updated to reflect that.
 
+You can read more [here](https://github.com/blog/2164-introducing-unlimited-private-repositories).
