@@ -3,13 +3,13 @@ title: Border box versus content box
 author:  Kylie Dale
 posted: 20161010
 summary:
-  What is the difference between `border-box` and `content-box` in css?
+  What is the difference between 'border-box' and 'content-box' in css?
 _options:
   layout: app/layouts/blog.static.hbs
 ---
 
 Since the beginning of css, the `box-sizing` style has always worked the same way by default:
-The actual rendered width of a box is the `width` attribute that is set + border + padding and the actual rendered height of a box is the `height` attribute that is set + border + padding.
+The rendered width of a box is the `width` + `border` + `padding` and the rendered height of a box is the `height` + `border` + `padding`.
 
 As can be imagined, this can be slightly confusing when the box that appears in a browser is smaller than expected.
 
@@ -27,11 +27,13 @@ height: 100px;
 border: 5px solid black;
 padding: 10px;
 ```
-The actual element will render with a width and height of 100px, with 10px of padding on each side before the border is rendered. In this case, the element will appear to have a width and height of 130px each.
+The actual DOM element will render with a width and height of 100px, with 10px of padding on each side before the border is rendered. In this case, the element will appear to have a width and height of 130px each.
+
+Using this method requires the developer to calculate the width and height the DOM element needs to be so that adding a border and/or padding won't change the apparent size of the element (as the example above changed the height and width of the element from 100px to 130px).
 
 ## box-sizing: border-box
 
-On the other hand, when the `box-sizing` css attribute is set to `border-box`, the element's width and height are not affected by additional padding or borders.
+On the other hand, when the `box-sizing` css attribute is set to `border-box`, the DOM element's width and height are not affected by additional padding or borders.
 
 If instead, I have the following css:
 
