@@ -103,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function init() {
   .then(function(response) {
     var data = response.data;
     if (response.headers.link) {
-      // 12/7/16 - response.headers.link does not exist
-      // check this again when we have more than 100 blocks
-      // only then is paging necessary -- KD
+      // 12/7/16 - response.headers.link does not exist with fewer than 100
+      // blocks. Check again when we have more than 100 blocks.
+      // Only then is paging necessary -- KD
       var link_header = parse_link_header(response.headers.link);
       axios.get(link_header.next)
       .then(function(nextResponse) {
