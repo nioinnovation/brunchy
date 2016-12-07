@@ -102,20 +102,20 @@ document.addEventListener('DOMContentLoaded', function init() {
   axios.get('//api.github.com/orgs/nio-blocks/repos?per_page=100')
   .then(function(response) {
     var data = response.data;
+    // response.headers.link does not exist with fewer than 100 blocks
     if (response.headers.link) {
-      // 12/7/16 - response.headers.link does not exist with fewer than 100
-      // blocks. Check again when we have more than 100 blocks.
-      // Only then is paging necessary -- KD
       var link_header = parse_link_header(response.headers.link);
       axios.get(link_header.next)
       .then(function(nextResponse) {
         var newData = nextResponse.data;
         link_header = parse_link_header(nextResponse.headers.link);
         data = data.concat(newData);
-        return renderTable(data);
+        renderTable(data);
       });
     }
-    renderTable(data);
+    else {
+      renderTable(data);
+    }
   })
   .catch(function(response) {
     console.log('error connecting to github api');
