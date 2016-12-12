@@ -16,3 +16,11 @@ tr:nth-child(3n+1) {
 .check-mark {
   color: steelblue;
 }
+
+.fa {
+  position: relative;
+  display: inline-block;
+  line-height: 0.1em;
+  top: 0.5em;
+  color: #9C9C9C;
+}
