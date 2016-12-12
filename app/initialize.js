@@ -6,7 +6,8 @@ var d3 = require('d3');
 var moment = require('moment');
 var sortedBy;
 var ascending = false;
-var sortUnicode = '\uf0dc';
+var sortDescUnicode = '\uf0dd';
+var sortAscUnicode = '\uf0de'
 
 function parse_link_header(header) {
   if (header.length === 0) {
@@ -76,7 +77,7 @@ function renderTable(data) {
     .on('click', function() {
       ascending = sortedBy === 'name' ? !ascending : false;
       renderRows(data, tableBody, 'name', ascending);
-      toggleClasses(blockHeader, ascending, 'name');
+      toggleClasses(blockHeader, ascending);
     });
   appendSortArrows(blockHeader);
 
@@ -85,7 +86,7 @@ function renderTable(data) {
     .on('click', function() {
       ascending = sortedBy === 'default_branch' ? !ascending : true;
       renderRows(data, tableBody, 'default_branch', ascending);
-      toggleClasses(defaultHeader, ascending, 'default_branch');
+      toggleClasses(defaultHeader, ascending);
     });
   appendSortArrows(defaultHeader);
 
@@ -96,7 +97,7 @@ function renderTable(data) {
     .on('click', function() {
       ascending = sortedBy === 'created_at' ? !ascending : true;
       renderRows(data, tableBody, 'created_at', ascending);
-      toggleClasses(createdHeader, ascending, 'created_at');
+      toggleClasses(createdHeader, ascending);
     });
   appendSortArrows(createdHeader);
 
@@ -105,7 +106,7 @@ function renderTable(data) {
     .on('click', function() {
       ascending = sortedBy === 'updated_at' ? !ascending : true;
       renderRows(data, tableBody, 'updated_at', ascending);
-      toggleClasses(updatedHeader, ascending, 'updated_at');
+      toggleClasses(updatedHeader, ascending);
     });
   appendSortArrows(updatedHeader);
 
@@ -114,11 +115,17 @@ function renderTable(data) {
   return repoTable;
 }
 
-function toggleClasses(headerEl, ascending, category) {
+function toggleClasses(headerEl, ascending) {
   headerEl.classed({
     'up': ascending,
     'down': !ascending
   });
+  d3.selectAll('text').style('color', '#9C9C9C');
+  if (ascending) {
+    headerEl.select('text:nth-child(1)').style('color', '#000');
+  } else {
+    headerEl.select('text:nth-child(2)').style('color', '#000');
+  }
 }
 
 function appendSortArrows(headerEl) {
@@ -126,7 +133,14 @@ function appendSortArrows(headerEl) {
     .style('font-family', 'FontAwesome')
     .style('font-size', '0.1em')
     .style('float', 'right')
-    .text(sortUnicode);
+    .text(sortDescUnicode)
+    .classed('fa', true);
+  headerEl.append('text')
+    .style('font-family', 'FontAwesome')
+    .style('font-size', '0.1em')
+    .style('float', 'right')
+    .text(sortAscUnicode)
+    .classed('fa', true);
 }
 
 document.addEventListener('DOMContentLoaded', function init() {
