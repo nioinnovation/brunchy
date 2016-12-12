@@ -6,6 +6,7 @@ var d3 = require('d3');
 var moment = require('moment');
 var sortedBy;
 var ascending = false;
+var sortUnicode = '\uf0dc';
 
 function parse_link_header(header) {
   if (header.length === 0) {
@@ -71,34 +72,42 @@ function renderTable(data) {
 
   var tableHeader = repoTable.append('thead').append('tr');
   var blockHeader = tableHeader.append('th').html('Block')
+    .style('cursor', 'pointer')
     .on('click', function() {
       ascending = sortedBy === 'name' ? !ascending : false;
       renderRows(data, tableBody, 'name', ascending);
       toggleClasses(blockHeader, ascending, 'name');
     });
+  appendSortArrows(blockHeader);
 
   var defaultHeader = tableHeader.append('th').html('2.0')
+    .style('cursor', 'pointer')
     .on('click', function() {
       ascending = sortedBy === 'default_branch' ? !ascending : true;
       renderRows(data, tableBody, 'default_branch', ascending);
       toggleClasses(defaultHeader, ascending, 'default_branch');
     });
+  appendSortArrows(defaultHeader);
 
   tableHeader.append('th').html('Description');
 
   var createdHeader = tableHeader.append('th').html('Created')
+    .style('cursor', 'pointer')
     .on('click', function() {
       ascending = sortedBy === 'created_at' ? !ascending : true;
       renderRows(data, tableBody, 'created_at', ascending);
       toggleClasses(createdHeader, ascending, 'created_at');
     });
+  appendSortArrows(createdHeader);
 
   var updatedHeader = tableHeader.append('th').html('Updated')
+    .style('cursor', 'pointer')
     .on('click', function() {
       ascending = sortedBy === 'updated_at' ? !ascending : true;
       renderRows(data, tableBody, 'updated_at', ascending);
       toggleClasses(updatedHeader, ascending, 'updated_at');
     });
+  appendSortArrows(updatedHeader);
 
   renderRows(data, tableBody);
 
@@ -107,9 +116,17 @@ function renderTable(data) {
 
 function toggleClasses(headerEl, ascending, category) {
   headerEl.classed({
-      'up': ascending,
-      'down': !ascending
-    })
+    'up': ascending,
+    'down': !ascending
+  });
+}
+
+function appendSortArrows(headerEl) {
+  headerEl.append('text')
+    .style('font-family', 'FontAwesome')
+    .style('font-size', '0.1em')
+    .style('float', 'right')
+    .text(sortUnicode);
 }
 
 document.addEventListener('DOMContentLoaded', function init() {
