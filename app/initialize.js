@@ -117,8 +117,9 @@ document.addEventListener('DOMContentLoaded', function init() {
   axios.get('//api.github.com/orgs/nio-blocks/repos?per_page=100')
   .then(function(response) {
     var data = response.data;
-    var link_header = parse_link_header(response.headers.link);
-    if (link_header.next) {
+    // response.headers.link does not exist with fewer than 100 blocks
+    if (response.headers.link) {
+      var link_header = parse_link_header(response.headers.link);
       axios.get(link_header.next)
       .then(function(nextResponse) {
         var newData = nextResponse.data;
@@ -126,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function init() {
         data = data.concat(newData);
         renderTable(data);
       });
-    } else {
+    }
+    else {
       renderTable(data);
     }
   })

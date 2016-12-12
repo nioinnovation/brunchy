@@ -18,17 +18,18 @@
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^6.3.6",
+    "brunch": "^2.9.1",
+    "chai": "^3.5.0",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
     "eslint-brunch": "^3.5.1",
     "javascript-brunch": "^2.0.0",
     "jsenv-brunch": "^1.4.2",
+    "mocha": "^2.0.1",
+    "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
     "postcss-brunch": "^0.5.0",
     "sass-brunch": "^2.6.0",
-    "nio-scss": "git+ssh://git@github.com:nioinnovation/brunchy.git#nio-scss",
-    "uglify-js-brunch": "^2.0.1",
-    "mocha": "^2.0.1",
-    "chai": "^3.5.0"
+    "uglify-js-brunch": "^2.0.1"
   },
   "dependencies": {
     "axios": "^0.13.1",
