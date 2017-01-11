@@ -13,6 +13,16 @@ module.exports = {
     port: 8080,
     noPushState: true,
   },
+  npm: {
+    globals: {
+      'io': 'socket.io-client'
+    }
+  },
+  modules: {
+    autoRequire: {
+      'app.js': ['initialize']
+    }
+  },
   plugins: {
     babel: {
       pattern: /\.jsx?$/
@@ -27,8 +37,7 @@ module.exports = {
     },
     sass: {
       mode: 'native',
-      options: { includePaths: ['node_modules/nio-scss/scss'] },
-      functions: require('nio-scss')
+      options: { includePaths: ['node_modules/nio-scss/scss'] }
     }
   }
 }

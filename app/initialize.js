@@ -1,5 +1,4 @@
-window.io = require('socket.io-client');
-
-document.addEventListener('DOMContentLoaded', function init() {
+// @flow
+document.addEventListener('DOMContentLoaded', () => {
   // do your setup here
 });
