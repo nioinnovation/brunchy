@@ -1,5 +1,5 @@
 ---
-title: How to do a local WordPress install
+title: How to create a local WordPress install
 author:  Jenny Knuth
 posted: 20161003
 summary:
